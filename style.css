@@ -1,12 +1,52 @@
-* {border: blue 1px dotted;}
+/* * {border: blue 1px dotted;} */
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.etchBoard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   display:flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
   width: 50%;
+  margin: 50px;
 }
 
+.buttonBox {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  color: white;
+  background-color: black;
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+/* need to figure out how to set height equal to width - accomplished set width and padding-top to the same value */
+/* need to find a better width solution than the one below for grids with different numbers of boxes */
+/* maybe create a variable that sets width % to 100/the entered number */
 .gridBox {
-  width: 24%;
+  width: 10%;
+  padding-top: 10%;
+  border: black 1px solid;
+}
+
+.touched {
+  background-color: black;
+}
+
+.erased {
+  background-color: white;
 }
