@@ -5,8 +5,8 @@ function makeGrid(boxes) {
   for (let i = 0; i < boxes * boxes; i++) {
     let div = document.createElement("div");
     div.classList.add("gridBox")
-    const dimensions = 100/boxes;
-    div.setAttribute("style", `width: ${dimensions}%, padding-top: ${dimensions}`)
+    const dimensions = 90/boxes;
+    div.setAttribute("style", `width: ${dimensions}%; padding-top: ${dimensions}%;`)
     let container = document.querySelector(".container")
     container.appendChild(div);
   };
@@ -66,7 +66,16 @@ function removeSketch() {
 const boardWipe = document.querySelector("#boardWipe");
 let container = document.querySelector(".container")
 boardWipe.addEventListener("click", () => {
-  const newDimensions = prompt("enter a number")
+  let newDimensions = prompt("Enter a number from 1-30")
+  if (newDimensions > 30) {
+    alert("Too high. Try again, maybe?");
+    return;
+  }
+  if (newDimensions < 1) {
+    alert("Too low. Try again, maybe?");
+    return;
+  }
+  alert("Ok, sure. Gimme a second...")
   let gridsToPurge = document.querySelectorAll(".gridBox")
   gridsToPurge.forEach((grid) => {
     container.removeChild(grid);

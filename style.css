@@ -38,8 +38,8 @@ button {
 /* need to find a better width solution than the one below for grids with different numbers of boxes */
 /* maybe create a variable that sets width % to 100/the entered number */
 .gridBox {
-  width: 10%;
-  padding-top: 10%;
+  /* width: 10%;
+  padding-top: 10%; */
   border: black 1px solid;
 }
 
